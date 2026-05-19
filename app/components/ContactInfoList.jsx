@@ -6,7 +6,7 @@ import {
   HiOutlineMapPin,
   HiOutlinePhone,
 } from "react-icons/hi2";
-import { CONTACT_ENTRIES } from "../data/contactInfo";
+import { CONTACT_ENTRIES } from "../Data/contactInfo";
 
 const ICONS = {
   phone: HiOutlinePhone,
