@@ -36,10 +36,10 @@ export default function RootLayout({ children }) {
     >
       <body className={`${urbanist.className} min-h-full flex flex-col font-sans`}>
         <StateContext>
-          <Toast />
-          <Nav />
+          {/* <Toast />
+          <Nav /> */}
           <main className="mt-16 flex-1 md:mt-[4.5rem]">{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </StateContext>
       </body>
     </html>
