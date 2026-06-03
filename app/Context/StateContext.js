@@ -8,7 +8,6 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import { usePathname, useRouter } from "next/navigation";
 import { getBlogs } from "../api/blog";
 import {
   PRACTICE_AREAS_SECTIONS,
@@ -19,9 +18,6 @@ import moment from "moment";
 const Context = createContext();
 
 export const StateContext = ({ children }) => {
-  const pathname = usePathname();
-  const router = useRouter();
-
   const [blog, setblog] = useState({
     data: [],
     pageInfo: { hasNextPage: true, endCursor: null },
@@ -114,10 +110,10 @@ export const StateContext = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    if (pathname !== "/") {
-      router.replace("/");
-    }
-  }, [pathname, router]);
+    fetchblog();
+    fetchPracticeAreas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Context.Provider

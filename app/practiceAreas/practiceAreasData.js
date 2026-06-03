@@ -1,6 +1,6 @@
 export function practiceAreasToNavLinks(sections) {
   return sections.map((area) => ({
-    name: area.navLabel ?? area.title.replace(/ Law$/, ""),
+    name: area.title,
     href: `/practiceAreas#${area.id}`,
   }));
 }
@@ -9,7 +9,6 @@ export const PRACTICE_AREAS_SECTIONS = [
   {
     id: "corporate-commercial",
     title: "Corporate & Commercial Law",
-    navLabel: "Corporate & Commercial",
     description:
       "Crabbe Crabbe & Co. advises on company formation, mergers and acquisitions, joint ventures, shareholder agreements, and day-to-day corporate governance. We help businesses structure transactions that protect their interests and support sustainable growth across Ghana and beyond.",
     image:

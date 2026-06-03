@@ -208,7 +208,6 @@ export const getPracticeAreas = async () => {
     return edges.map(({ node }) => ({
       id: node.slug,
       title: node.areaName ?? "",
-      navLabel: node.areaName?.replace(/ Law$/, "") ?? node.areaName ?? "",
       description: node.description ?? "",
       image: node.coverImage?.url ?? "",
     }));

@@ -5,15 +5,52 @@ import { useState } from "react";
 import { HiArrowRight } from "react-icons/hi2";
 import Pattern from "./Pattern";
 
-const INTRO = `Mr. Crabbe Crabbe is the Founder and Head of Chambers of Crabbe Crabbe & Co. He leads the firm's strategic direction and is widely regarded for his measured judgment, commanding courtroom presence, and dedication to the highest standards of legal practice in Ghana.
+const NAME = "Dr. Edward Sam Crabbe Esq.";
+const ROLE = "Managing Partner";
+const TAGLINE =
+  "Lawyer, Governance & Compliance Consultant, Banking and Tax Advisory Specialist";
 
-He has advised and represented clients across corporate and commercial matters, dispute resolution, and general advisory work, bringing a practical, client-focused approach to every brief.`;
+const INTRO_PARAGRAPHS = [
+  "Dr. Edward Sam Crabbe is a distinguished legal practitioner, Notary Public, Governance Consultant, and Regulatory and Tax Advisory professional with over fifteen (15) years of legal practice spanning civil and criminal litigation, with deep specialisation in corporate law, banking and finance law, commercial law, land law, and labour law.",
+  "He is the Managing Partner of Crabbe, Crabbe & Co., a position he has held since October 2015. Prior to founding and leading the Firm, he served as Managing Partner of Crabbe, Romanlevi & Associates (2014–2015) and as Acting Managing Partner of Brookman-Amissah & Associates (2012–2013), where he had earlier practised as a lawyer from 2009. Between 2007 and 2012, he also served as a Resource Person and Lecturer at the Faculty of Law, University of Ghana, Legon, where he contributed to the formation of a generation of Ghanaian legal practitioners.",
+];
 
-const BIO = `Mr. Crabbe Crabbe has spent much of his career building a practice grounded in preparation, integrity, and effective advocacy. As Head of Chambers, he sets the tone for the firm — mentoring associates, overseeing complex matters, and ensuring that every client receives counsel that is both legally sound and commercially sensible.
+const EXPERTISE_AREAS = [
+  "Banking and Finance Law",
+  "Land Law",
+  "Corporate Governance",
+  "Regulatory Compliance",
+  "Debt Recovery & Enforcement",
+  "Commercial Litigation",
+  "Risk, Compliance and Tax Advisory",
+  "Institutional Governance",
+  "Banking Operations Advisory",
+  "Corporate & Commercial Transactions",
+];
 
-He is known for his calm leadership under pressure, his attention to detail, and his ability to distil complex legal issues into clear options for clients. Beyond the courtroom, he is committed to developing the next generation of Ghanaian legal practitioners and to strengthening access to quality legal representation.
+const ADVISORY =
+  "Dr. Crabbe has built a strong reputation for providing practical, commercially focused, and solution-driven legal and governance support. He is actively involved in advisory and consultancy services for financial institutions, including training banking executives, management, compliance officers, and operational staff in areas such as Negotiable Instruments, Fraud Detection & Prevention, Banking Regulation, Operational Risk Management, and Corporate Governance.";
 
-His vision for Crabbe Crabbe & Co. is a firm that combines traditional professional values with a modern, responsive approach — serving clients from the firm's offices in Accra and Winneba with the same rigour and care.`;
+const QUALIFICATIONS = [
+  "Doctorate in Theology (ThD) — Immanuel Bible Institute, Brooklyn, Ghana Campus",
+  "Professional Law Certificate (BL) — Ghana School of Law, Makola, Accra (2009)",
+  "LLB (Honours) — Faculty of Law, University of Ghana, Legon",
+  "Certificate in Statistics — University of Ghana, Legon",
+  "BA (Honours) in Philosophy and Religion — University of Ghana, Legon",
+];
+
+const BAR_MEMBERSHIP =
+  "He is a member in good standing of the Ghana Bar Association and an enrolled Solicitor and Barrister of the Superior Courts of Ghana, and continues to hold a valid Solicitor's Licence from the General Legal Council.";
+
+function BulletList({ items }) {
+  return (
+    <ul className="list-disc space-y-2 pl-5 marker:text-primary_color">
+      {items.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
+    </ul>
+  );
+}
 
 export default function HeadOfChambers() {
   const [expanded, setExpanded] = useState(false);
@@ -21,14 +58,14 @@ export default function HeadOfChambers() {
   return (
     <section className="mb-16 md:mb-20">
       <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
-        <div className="relative flex flex-row-reverse gap-10">
+        <div className="relative flex flex-row-reverse gap-10 lg:sticky lg:top-[4.5rem] lg:self-start">
           <div className="absolute right-4 top-4 z-10 md:relative md:right-0 md:top-0">
             <Pattern layout="grid" count={4} size="sm" gap="gap-1" />
           </div>
           <div className="relative aspect-[3/4] w-full max-h-[500px] max-w-md overflow-hidden">
             <Image
               src="/company/team 2.jpg"
-              alt="Mr Crabbe Crabbe, Head Senior Partner"
+              alt={`${NAME}, ${ROLE}`}
               fill
               className="object-cover object-top"
               sizes="(max-width: 1024px) 90vw, 420px"
@@ -36,23 +73,44 @@ export default function HeadOfChambers() {
             />
           </div>
           <div className="absolute bottom-10 left-10 w-full max-w-[300px] bg-primary_color px-4 py-3 md:bottom-1/3 md:left-[60%] md:px-6 md:py-4">
-            <h6 className="font-semibold text-white">Mr Crabbe Crabbe</h6>
-            <p className="text-sm text-white/90">Head Senior Partner</p>
+            <h6 className="font-semibold text-white">{NAME}</h6>
+            <p className="text-sm text-white/90">{ROLE}</p>
           </div>
         </div>
 
         <div>
           <h2 className="heading_primary text-3xl font-bold md:text-4xl lg:text-5xl">
-            Head of Chambers
+            Managing Partner
           </h2>
+          <p className="mt-3 text-sm font-medium text-secondary_color/90 md:text-base">
+            {TAGLINE}
+          </p>
           <div className="mt-6 space-y-4">
-            {INTRO.split("\n\n").map((paragraph) => (
-              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+            {INTRO_PARAGRAPHS.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
             ))}
-            {expanded &&
-              BIO.split("\n\n").map((paragraph) => (
-                <p key={paragraph.slice(0, 40)}>{paragraph}</p>
-              ))}
+
+            {expanded && (
+              <>
+                <div>
+                  <p className="mb-3 font-medium text-secondary_color">
+                    His areas of expertise include:
+                  </p>
+                  <BulletList items={EXPERTISE_AREAS} />
+                </div>
+
+                <p>{ADVISORY}</p>
+
+                <div>
+                  <p className="mb-3 font-medium text-secondary_color">
+                    He holds:
+                  </p>
+                  <BulletList items={QUALIFICATIONS} />
+                </div>
+
+                <p>{BAR_MEMBERSHIP}</p>
+              </>
+            )}
           </div>
           <button
             type="button"

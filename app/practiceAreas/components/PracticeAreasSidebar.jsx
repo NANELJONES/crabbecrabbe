@@ -21,7 +21,7 @@ function getLinkClassName(isActive) {
 function NavLink({ area, isActive }) {
   return (
     <a href={`#${area.id}`} className={getLinkClassName(isActive)}>
-      {area.navLabel ?? area.title.replace(/ Law$/, "")}
+      {area.title}
     </a>
   );
 }

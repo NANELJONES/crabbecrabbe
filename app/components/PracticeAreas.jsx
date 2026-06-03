@@ -55,7 +55,7 @@ export default function PracticeAreas({ hideHeader = false }) {
                 </div>
                 <div className="bg-secondary_color px-4 py-4">
                   <h6 className="text-white">
-                    {area.navLabel ?? area.title}
+                    {area.title}
                   </h6>
                   <p className="mt-2 line-clamp-2 !text-xs text-white/80 md:text-sm">
                     {area.description}

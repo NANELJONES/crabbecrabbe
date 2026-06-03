@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { HiXMark } from "react-icons/hi2";
 import Heading from "../components/Heading";
 import HeadOfChambers from "../components/HeadOfChambers";
+import AsstHeadOfChambers from "../components/AsstHeadOfChambers";
 import Layout1 from "../layout/Layout1";
 import Pattern from "../components/Pattern";
 
@@ -167,6 +168,7 @@ export default function TeamPage() {
         />
 
         <HeadOfChambers />
+        <AsstHeadOfChambers />
 
         <section>
           <h2 className="heading_primary mb-8 text-2xl font-bold md:mb-10 md:text-3xl lg:text-4xl">

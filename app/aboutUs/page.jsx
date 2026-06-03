@@ -3,6 +3,8 @@ import Layout1 from "../layout/Layout1";
 import CoreValues from "./components/CoreValues";
 import MissionVision from "./components/MissionVision";
 import WhoAreWe from "./components/WhoAreWe";
+import AboutUs from "./components/AboutUs";
+import WhyClientsChooseUs from "./components/WhyClientsChooseUs";
 import CTA from "../components/CTA";
 export default function AboutPage() {
   return (
@@ -14,8 +16,11 @@ export default function AboutPage() {
         />
 
         <WhoAreWe />
+        <AboutUs />
+       
         <MissionVision />
         <CoreValues />
+        <WhyClientsChooseUs />
         <CTA />
       </Layout1>
     </div>
