@@ -6,6 +6,7 @@ import { useState } from "react";
 import { HiArrowRight } from "react-icons/hi2";
 import { handle_toast_notification } from "../components/Toast";
 import Heading from "../components/Heading";
+import AnimateUp from "../components/AnimateUp";
 import Layout1 from "../layout/Layout1";
 
 const EMAIL_SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_SERVICE_ID;
@@ -125,14 +126,17 @@ export default function AppointmentPage() {
   return (
     <div className="min-h-screen bg-white">
       <Layout1>
-        <Heading
-          heading="Book An Appointment"
-          subHeading="Schedule a consultation with our team at your preferred branch in Ghana."
-        />
+        <AnimateUp>
+          <Heading
+            heading="Book An Appointment"
+            subHeading="Schedule a consultation with our team at your preferred branch in Ghana."
+          />
+        </AnimateUp>
       </Layout1>
 
       <section className="section_container pt-0 md:pt-2">
         <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-2 lg:gap-14 xl:gap-20">
+          <AnimateUp>
           <div
             className="relative min-h-[360px] w-full bg-cover bg-center bg-no-repeat sm:min-h-[420px] lg:min-h-[560px]"
             style={{ backgroundImage: `url('${PATTERN_BG}')` }}
@@ -150,7 +154,9 @@ export default function AppointmentPage() {
               </div>
             </div> */}
           </div>
+          </AnimateUp>
 
+          <AnimateUp delay={0.1}>
           <form
             onSubmit={handleSubmit}
             className="flex flex-col justify-center gap-8 py-4 lg:py-8"
@@ -335,6 +341,7 @@ export default function AppointmentPage() {
               </button>
             </div>
           </form>
+          </AnimateUp>
         </div>
       </section>
     </div>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HiXMark } from "react-icons/hi2";
 import Heading from "../components/Heading";
+import AnimateUp from "../components/AnimateUp";
 import HeadOfChambers from "../components/HeadOfChambers";
 import AsstHeadOfChambers from "../components/AsstHeadOfChambers";
 import Layout1 from "../layout/Layout1";
@@ -162,18 +163,26 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen bg-white">
       <Layout1>
-        <Heading
-          heading="Our Team"
-          subHeading="Meet the team of experts at Crabbe Crabbe & Co."
-        />
+        <AnimateUp>
+          <Heading
+            heading="Our Team"
+            subHeading="Meet the team of experts at Crabbe Crabbe & Co."
+          />
+        </AnimateUp>
 
-        <HeadOfChambers />
-        <AsstHeadOfChambers />
+        <AnimateUp>
+          <HeadOfChambers />
+        </AnimateUp>
+        <AnimateUp delay={0.05}>
+          <AsstHeadOfChambers />
+        </AnimateUp>
 
         <section>
-          <h2 className="heading_primary mb-8 text-2xl font-bold md:mb-10 md:text-3xl lg:text-4xl">
-           Our Expert Team
-          </h2>
+          <AnimateUp>
+            <h2 className="heading_primary mb-8 text-2xl font-bold md:mb-10 md:text-3xl lg:text-4xl">
+              Our Expert Team
+            </h2>
+          </AnimateUp>
 
           {isLoading && (
             <p className="text-secondary_color/70">Loading team members…</p>
@@ -186,12 +195,13 @@ export default function TeamPage() {
           )}
 
           <div className="flex w-full flex-wrap justify-center gap-4 md:gap-6">
-            {team.map((member) => {
+            {team.map((member, index) => {
               const isExpanded = selectedId === member.id;
 
               return (
-                <div
+                <AnimateUp
                   key={member.id}
+                  delay={Math.min(index * 0.06, 0.36)}
                   className={isExpanded ? EXPANDED_WIDTH : CARD_WIDTH}
                 >
                   {isExpanded ? (
@@ -206,7 +216,7 @@ export default function TeamPage() {
                       onClick={() => toggleMember(member.id)}
                     />
                   )}
-                </div>
+                </AnimateUp>
               );
             })}
           </div>

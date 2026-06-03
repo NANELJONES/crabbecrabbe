@@ -25,10 +25,10 @@ const COMPANY_LINKS_RIGHT = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: FaFacebookF, label: "Facebook", href: "https://web.facebook.com/" },
-  { icon: FaInstagram, label: "Instagram", href: "https://www.instagram.com/" },
-  { icon: FaLinkedinIn, label: "LinkedIn", href: "https://www.linkedin.com/" },
-  { icon: FaFacebookF, label: "Facebook", href: "https://web.facebook.com/" },
+  { icon: FaFacebookF, label: "Facebook", href: "#" },
+  { icon: FaInstagram, label: "Instagram", href: "#" },
+  { icon: FaLinkedinIn, label: "LinkedIn", href: "#" },
+  { icon: FaFacebookF, label: "Facebook", href: "#" },
 ];
 
 const Footer = () => {

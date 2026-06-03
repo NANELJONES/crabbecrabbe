@@ -33,7 +33,7 @@ const Blog = () => {
             <div className=' flex flex-col gap-4 '>
             {blog.data.map((each_blog, index) => {
   return (
-    <AnimateUp key={index}>
+    <AnimateUp key={index} delay={Math.min(index * 0.06, 0.36)}>
       <div className="relative px-2 py-2  border-b-2 flex flex-col gap-[1em] md:grid md:grid-cols-3 lg:grid-cols-4 gap-[1em]">
         {/* Cover Image */}
         <div className="w-full md:w-[15em] md:mx-auto col-span-1 h-[15em] md:max-w-[400px] rounded-sm">

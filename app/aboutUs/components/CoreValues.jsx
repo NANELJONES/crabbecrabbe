@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AnimateUp from "../../components/AnimateUp";
 import {
   HiOutlineLightBulb,
   HiOutlineScale,
@@ -64,22 +64,26 @@ export default function CoreValues() {
       <div className="relative z-10">
         <h1 className="heading_primary">Our Story & Core Values</h1>
 
-        <div className="mt-8 flex gap-4 md:mt-10 md:gap-5">
-          <span
-            className="w-1 shrink-0 self-stretch bg-primary_color md:w-1.5"
-            aria-hidden
-          />
-          <p className="max-w-4xl">
-            Crabbe Crabbe & Co. was founded with a clear vision to redefine legal
-            service delivery in Ghana through excellence, trust, and innovation.
-            From its inception, the firm has remained focused on building strong
-            client relationships while delivering results that matter.
-          </p>
-        </div>
+        <AnimateUp>
+          <div className="mt-8 flex gap-4 md:mt-10 md:gap-5">
+            <span
+              className="w-1 shrink-0 self-stretch bg-primary_color md:w-1.5"
+              aria-hidden
+            />
+            <p className="max-w-4xl">
+              Crabbe Crabbe & Co. was founded with a clear vision to redefine legal
+              service delivery in Ghana through excellence, trust, and innovation.
+              From its inception, the firm has remained focused on building strong
+              client relationships while delivering results that matter.
+            </p>
+          </div>
+        </AnimateUp>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-14">
-          {CORE_VALUES.map((value) => (
-            <ValueCard key={value.title} value={value} />
+          {CORE_VALUES.map((value, index) => (
+            <AnimateUp key={value.title} delay={Math.min(index * 0.07, 0.35)}>
+              <ValueCard value={value} />
+            </AnimateUp>
           ))}
         </div>
       </div>

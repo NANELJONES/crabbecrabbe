@@ -29,7 +29,7 @@ const BlogSample = () => {
                     <div className='md:w-full   flex flex-col items-start gap-4'>
                                 
                     {blog.data.slice(0,4).map((each_blog,index)=>{
-                            return  <AnimateUp key={index}>
+                            return  <AnimateUp key={index} delay={index * 0.08}>
                         <div className='relative px-2 py-2 border-b-2 flex flex-col   md:grid grid-cols-5 gap-[1em]  md:gap-[1em]  ' >
 
                           {/* this is the cover image */}

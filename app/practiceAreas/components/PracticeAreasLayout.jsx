@@ -1,6 +1,7 @@
 "use client";
 
 import { useStateContext } from "@/app/Context/StateContext";
+import AnimateUp from "@/app/components/AnimateUp";
 import PracticeAreaSection from "./PracticeAreaSection";
 import PracticeAreasSidebar, {
   PracticeAreasMobileNav,
@@ -23,8 +24,10 @@ export default function PracticeAreasLayout() {
           sections={sections}
         />
 
-        {sections.map((area) => (
-          <PracticeAreaSection key={area.id} {...area} />
+        {sections.map((area, index) => (
+          <AnimateUp key={area.id} delay={Math.min(index * 0.08, 0.4)}>
+            <PracticeAreaSection {...area} />
+          </AnimateUp>
         ))}
       </main>
     </div>

@@ -7,6 +7,7 @@ import { HiArrowRight } from "react-icons/hi2";
 import ContactInfoList from "../components/ContactInfoList";
 import { handle_toast_notification } from "../components/Toast";
 import Heading from "../components/Heading";
+import AnimateUp from "../components/AnimateUp";
 import Layout1 from "../layout/Layout1";
 
 const EMAIL_SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_SERVICE_ID;
@@ -112,16 +113,21 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <Layout1>
-        <Heading
-          heading="Get In Touch With Us"
-          subHeading="Discuss your legal needs or request a consultation with our team in Ghana."
-        />
+        <AnimateUp>
+          <Heading
+            heading="Get In Touch With Us"
+            subHeading="Discuss your legal needs or request a consultation with our team in Ghana."
+          />
+        </AnimateUp>
       </Layout1>
 
       <section className="section_container pt-0 md:pt-2">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-24">
-          <ContactVisual />
+          <AnimateUp>
+            <ContactVisual />
+          </AnimateUp>
 
+          <AnimateUp delay={0.1}>
           <form
             onSubmit={handleSubmit}
             className="flex w-full max-w-lg flex-col justify-center gap-8 lg:max-w-none lg:py-4"
@@ -212,6 +218,7 @@ export default function ContactPage() {
               </button>
             </div>
           </form>
+          </AnimateUp>
         </div>
       </section>
     </div>

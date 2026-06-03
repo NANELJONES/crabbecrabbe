@@ -5,39 +5,43 @@ import { useRef } from "react";
 import { IN_VIEW_EASE } from "./animationConfig";
 import { useStableInView } from "./useStableInView";
 
-export default function AnimateUp({
-  children,
+export default function AnimatedLine({
   className = "",
   delay = 0,
-  duration = 0.7,
-  y = 56,
-  amount = 0.3,
+  thick = false,
+  amount = 0.35,
 }) {
   const ref = useRef(null);
   const inView = useStableInView(ref, { amount });
   const prefersReducedMotion = useReducedMotion();
+  const barClass = thick
+    ? "h-0.5 bg-secondary_color"
+    : "h-px bg-secondary_color/20";
 
   if (prefersReducedMotion) {
     return (
-      <div ref={ref} className={className}>
-        {children}
-      </div>
+      <div
+        ref={ref}
+        className={`w-full ${barClass} ${className}`}
+        role="presentation"
+      />
     );
   }
 
   return (
     <motion.div
       ref={ref}
-      className={className}
+      role="presentation"
+      className={`${barClass} ${className}`}
       initial={false}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y }}
+      animate={
+        inView ? { width: "100%", opacity: 1 } : { width: 0, opacity: 0.35 }
+      }
       transition={{
-        duration,
+        duration: 0.9,
         delay: inView ? delay : 0,
         ease: IN_VIEW_EASE,
       }}
-    >
-      {children}
-    </motion.div>
+    />
   );
 }

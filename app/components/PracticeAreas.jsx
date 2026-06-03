@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useStateContext } from "../Context/StateContext";
+import AnimateUp from "./AnimateUp";
 import Pattern from "./Pattern";
 
 export default function PracticeAreas({ hideHeader = false }) {
@@ -16,7 +17,7 @@ export default function PracticeAreas({ hideHeader = false }) {
           className={`grid grid-cols-1 gap-12 lg:gap-16 ${hideHeader ? "" : "lg:grid-cols-5"}`}
         >
           {!hideHeader && (
-            <div className="flex flex-col justify-between lg:col-span-2">
+            <AnimateUp className="flex flex-col justify-between lg:col-span-2">
               <h1 className="heading_primary">Our Practice Areas</h1>
               <div className="mt-6 hidden flex-col gap-4 lg:flex">
                 <Pattern size="large" />
@@ -26,17 +27,21 @@ export default function PracticeAreas({ hideHeader = false }) {
                 We offer a broad range of legal services designed to meet the
                 needs of individuals, corporations, and institutions.
               </h5>
-            </div>
+            </AnimateUp>
           )}
 
           <div
             className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 ${hideHeader ? "" : "col-span-3"}`}
           >
-            {sections.map((area) => (
-              <Link
+            {sections.map((area, index) => (
+              <AnimateUp
                 key={area.id}
+                delay={Math.min(index * 0.06, 0.36)}
+                className="h-full"
+              >
+              <Link
                 href={`/practiceAreas#${area.id}`}
-                className="group overflow-hidden"
+                className="group block h-full overflow-hidden"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
                   {area.image ? (
@@ -62,6 +67,7 @@ export default function PracticeAreas({ hideHeader = false }) {
                   </p>
                 </div>
               </Link>
+              </AnimateUp>
             ))}
           </div>
         </div>

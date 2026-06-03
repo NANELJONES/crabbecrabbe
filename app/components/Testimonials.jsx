@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import AnimateUp from "./AnimateUp";
 
 function Stars({ score = 5 }) {
   const filled = Math.min(5, Math.max(0, Math.round(score)));
@@ -48,17 +49,19 @@ export default function Testimonials() {
     <section className="bg-white">
       <div className="section_container">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
-          <div>
-            <p className="heading_primary text-sm font-semibold tracking-wide uppercase md:text-base">
-              Our Cherished Client Feedback
-            </p>
-            <h1 className="mt-3">Our Testimonials</h1>
-            <p className="mt-4">
-              The testimonials below provide a glimpse into what partners across
-              private enterprises, public agencies and community associations have
-              to say about collaborating with our firm.
-            </p>
-          </div>
+          <AnimateUp>
+            <div>
+              <p className="heading_primary text-sm font-semibold tracking-wide uppercase md:text-base">
+                Our Cherished Client Feedback
+              </p>
+              <h1 className="mt-3">Our Testimonials</h1>
+              <p className="mt-4">
+                The testimonials below provide a glimpse into what partners across
+                private enterprises, public agencies and community associations have
+                to say about collaborating with our firm.
+              </p>
+            </div>
+          </AnimateUp>
 
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {isLoading && (
@@ -73,9 +76,9 @@ export default function Testimonials() {
               </p>
             )}
 
-            {testimonials.map((item) => (
+            {testimonials.map((item, index) => (
+              <AnimateUp key={item.id} delay={Math.min(index * 0.08, 0.32)}>
               <article
-                key={item.id}
                 className="rounded-lg border border-secondary_color/10 bg-white p-5 shadow-sm"
               >
                 <div className="flex items-center gap-3">
@@ -108,6 +111,7 @@ export default function Testimonials() {
                 </div>
                 <p className="mt-3 text-sm leading-relaxed">{item.text}</p>
               </article>
+              </AnimateUp>
             ))}
           </div>
         </div>
