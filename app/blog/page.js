@@ -1,3 +1,5 @@
+export { metadata } from "./metadata";
+
 import Heading from "../components/Heading";
 import AnimateUp from "../components/AnimateUp";
 import Layout1 from "../layout/Layout1";

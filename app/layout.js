@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Toast from "./components/Toast";
 import { StateContext } from "./Context/StateContext";
+import { SITE_METADATA } from "./seo/site";
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -24,9 +25,7 @@ const poppins = Poppins({
 const FAVICON = "/favicon_io";
 
 export const metadata = {
-  title: "CrabbeCrabbe&Co",
-  description:
-    "CrabbeCrabbe&Co — a law firm in Ghana providing trusted legal counsel and representation.",
+  ...SITE_METADATA,
   icons: {
     icon: [
       { url: `${FAVICON}/favicon.ico`, sizes: "any" },
@@ -48,20 +47,7 @@ export const metadata = {
         type: "image/png",
       },
     ],
-    other: [
-      {
-        rel: "icon",
-        url: `${FAVICON}/android-chrome-192x192.png`,
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        rel: "icon",
-        url: `${FAVICON}/android-chrome-512x512.png`,
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
+    shortcut: `${FAVICON}/favicon.ico`,
   },
   manifest: `${FAVICON}/site.webmanifest`,
   appleWebApp: {

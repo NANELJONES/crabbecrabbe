@@ -96,6 +96,27 @@ body {
     @apply text-primary_color;
   }
 
+  .case-rich-text h1,
+  .case-rich-text h2,
+  .case-rich-text h3,
+  .case-rich-text h4,
+  .case-rich-text p,
+  .case-rich-text li {
+    @apply text-secondary_color;
+  }
+
+  .case-rich-text h2 {
+    @apply mt-8 mb-3 text-xl font-semibold md:text-2xl;
+  }
+
+  .case-rich-text p {
+    @apply mb-4;
+  }
+
+  .case-rich-text ul {
+    @apply mb-4 list-disc space-y-2 pl-6;
+  }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
