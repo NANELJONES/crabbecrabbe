@@ -223,7 +223,7 @@ const EXTRA = [
   "legal excellence Ghana",
   "law firm East La",
   "law firm behind Trade Fair",
-  "Winneba legal services",
+  "Weija legal services",
   "Accra law chambers",
   "Ghana managing partner law firm",
   "senior partner law firm Ghana",

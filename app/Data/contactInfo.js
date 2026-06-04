@@ -16,9 +16,9 @@ export const CONTACT_LOCATIONS = [
       "No.D002 Tunma Street (Tse Addo High Street) Behind Trade Fair, East La, Accra, Accra, Ghana",
   },
   {
-    id: "winneba",
-    title: "Winneba",
-    address: "Winnebba",
+    id: "Weija",
+    title: "Weija",
+    address: "Weija",
   },
 ];
 

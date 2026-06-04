@@ -18,7 +18,7 @@ const PATTERN_BG = "/Pattern%202.png";
 
 const BRANCHES = [
   { value: "tse-addo", label: "Tse Addo" },
-  { value: "winneba", label: "Winneba" },
+  { value: "Weija", label: "Weija" },
 ];
 
 const MEETING_TYPES = [

@@ -7,12 +7,12 @@ import AnimatedNumber from "./AnimatedNumber";
 import ButtonLink from "./ButtonLink";
 
 const STATS = [
-  { label: "Cases Number:", value: 1000, suffix: " +" },
-  { label: "Number of Clients", value: 200, suffix: " +" },
-  { label: "Awards", value: 15, suffix: " +" },
-  { label: "Success Rate", value: 95, suffix: " %" },
+  // { label: "Cases Number:", value: 1000, suffix: " +" },
+  // { label: "Number of Clients", value: 200, suffix: " +" },
+  // { label: "Awards", value: 15, suffix: " +" },
+  // { label: "Success Rate", value: 95, suffix: " %" },
   { label: "Experience in Years", value: 10, suffix: " +" },
-  { label: "Client Satisfaction Score", value: 80, suffix: " %" },
+  // { label: "Client Satisfaction Score", value: 80, suffix: " %" },
 ];
 
 export default function AboutUs({ hideHeader = false }) {
