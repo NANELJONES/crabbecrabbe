@@ -6,6 +6,7 @@ import { HiXMark } from "react-icons/hi2";
 import Heading from "../components/Heading";
 import AnimateUp from "../components/AnimateUp";
 import HeadOfChambers from "../components/HeadOfChambers";
+import MrsCrabbe from "../components/MrsCrabbe";
 import AsstHeadOfChambers from "../components/AsstHeadOfChambers";
 import Layout1 from "../layout/Layout1";
 import Pattern from "../components/Pattern";
@@ -174,6 +175,9 @@ export default function TeamPage() {
           <HeadOfChambers />
         </AnimateUp>
         <AnimateUp delay={0.05}>
+          <MrsCrabbe />
+        </AnimateUp>
+        <AnimateUp delay={0.1}>
           <AsstHeadOfChambers />
         </AnimateUp>
 

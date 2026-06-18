@@ -8,4 +8,5 @@ export const PUBLIC_STATIC_ROUTES = [
   { path: "/appointment", changeFrequency: "monthly", priority: 0.8 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
   { path: "/cases", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/careers", changeFrequency: "weekly", priority: 0.75 },
 ];

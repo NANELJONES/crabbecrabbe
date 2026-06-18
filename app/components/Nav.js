@@ -9,6 +9,7 @@ import { useStateContext } from "../Context/StateContext";
 const RESOURCES = [
   { name: "Blog", href: "/blog" },
   { name: "Cases", href: "/cases" },
+  { name: "Careers", href: "/careers" },
 ];
 
 const Nav = () => {
