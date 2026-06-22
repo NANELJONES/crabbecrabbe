@@ -12,7 +12,7 @@ export default function CasesPage() {
         <AnimateUp>
           <Heading
             heading="Our Cases"
-            subHeading="Explore notable matters and outcomes that reflect our commitment to trusted advocacy and proven results."
+            subHeading="Representative matters handled by the Firm across its practice areas."
           />
         </AnimateUp>
 

@@ -93,7 +93,7 @@ body {
   }
 
   .heading_primary {
-    @apply text-primary_color;
+    @apply text-secondary_color;
   }
 
   .case-rich-text h1,

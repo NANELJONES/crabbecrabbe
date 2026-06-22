@@ -9,7 +9,6 @@ import { useStateContext } from "../Context/StateContext";
 const RESOURCES = [
   { name: "Blog", href: "/blog" },
   { name: "Cases", href: "/cases" },
-  { name: "Careers", href: "/careers" },
 ];
 
 const Nav = () => {
@@ -32,6 +31,7 @@ const Nav = () => {
         href: "/blog",
         subMenu: RESOURCES,
       },
+      { name: "Careers", href: "/careers" },
       { name: "Contact Us", href: "/contactUs" },
     ],
     [practiceAreaNavLinks]
@@ -167,7 +167,7 @@ const Nav = () => {
               className="secondary_button block w-full text-center text-sm md:inline-flex md:w-auto md:px-5 md:py-2 md:text-[0.85rem]"
               onClick={closeMobile}
             >
-              Book an appointment
+              Request an appointment
             </Link>
           </li>
         </ul>

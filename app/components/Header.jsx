@@ -15,7 +15,7 @@ const SLIDES = [
       "bg-gradient-to-r from-black/75 via-black/55 to-black/40",
     imageAlt: "Crabbe Crabbe & Co. legal team",
     headlineClass: "text-white drop-shadow-sm",
-    lines: ["Trusted Advocacy.", "Proven Results."],
+    lines: ["Legal Services", "in Ghana."],
   },
   {
     id: "pattern-light",
@@ -25,7 +25,7 @@ const SLIDES = [
       "bg-gradient-to-r from-black/75 via-black/55 to-black/40",
     imageAlt: "",
     headlineClass: "text-white drop-shadow-sm",
-    lines: ["Strategic Counsel.", "Lasting Impact."],
+    lines: ["Corporate, Banking", "& Litigation Practice."],
   },
 ];
 
@@ -81,9 +81,8 @@ export default function Header() {
           <div className="flex gap-4">
             <span className="w-1 shrink-0 bg-primary_color" aria-hidden />
             <p className="text-white">
-              At Crabbe Crabbe & Co., we combine legal expertise with practical
-              insight to protect your interests, resolve disputes, and drive
-              success.
+              Crabbe Crabbe & Co. is a full-service law firm in Ghana with offices
+              in Tse Addo and Weija, Accra. 
             </p>
           </div>
         </div>
@@ -117,10 +116,10 @@ export default function Header() {
 
             <div className="mt-6 flex flex-wrap gap-4">
               <ButtonLink href="/contactUs" variant="secondary">
-                Contact Our Firm
+                Contact the Firm
               </ButtonLink>
               <ButtonLink href="/appointment" variant="primary">
-                Book an appointment
+                Request an appointment
               </ButtonLink>
             </div>
           </div>

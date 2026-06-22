@@ -22,10 +22,8 @@ export default function AboutUs({ hideHeader = false }) {
         {!hideHeader && (
           <AnimateUp amount={0.35}>
             <h3 className="heading_primary max-w-3xl">
-              Crabbe Crabbe & Co. is a modern law firm committed to delivering
-              exceptional legal solutions with precision and integrity. We serve
-              individuals and businesses across Ghana with a strong focus on
-              results, trust, and long-term value.
+            Crabbe, Crabbe & Co. is a law firm in Ghana that advises individuals, businesses, financial institutions, and public sector entities on a range of legal and regulatory matters. The firm has offices in Tse Addo and Weija, Accra.
+
             </h3>
             <AnimatedLine className="mt-8" delay={0.15} amount={0.4} />
           </AnimateUp>
@@ -49,12 +47,18 @@ export default function AboutUs({ hideHeader = false }) {
             <AnimateUp delay={0.08} amount={0.35}>
               <div>
                 <p>
-                  Built on a foundation of excellence and innovation, our firm
-                  provides strategic legal guidance tailored to each client&apos;s
-                  unique needs. We combine deep legal expertise with practical,
-                  business-oriented thinking to help clients navigate complex legal
-                  challenges with confidence. Our approach is rooted in integrity,
-                  collaboration, and a commitment to achieving meaningful outcomes.
+                  The Firm provides legal services across corporate and commercial
+                  law, banking and finance, litigation and dispute resolution,
+                  regulatory compliance, property, labour, and tax. Our lawyers
+                  approach each instruction with regard to the client&apos;s
+                  objectives, the applicable legal framework, and the standards
+                  required under the Legal Profession Rules of Ghana.
+                </p>
+                <p className="mt-4">
+                  Our work is guided by a commitment to professional service,
+                  sound judgment, and clear communication. The Firm continues to
+                  develop its practice areas, personnel, and internal systems to
+                  support complex and evolving client matters.
                 </p>
                 <div className="mt-8">
                   <ButtonLink href="/aboutUs" variant="primary">

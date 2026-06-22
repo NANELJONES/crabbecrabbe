@@ -11,11 +11,11 @@ const TAGLINE =
   "Lawyer, Governance & Compliance Consultant, Banking and Tax Advisory Specialist";
 
 const INTRO_PARAGRAPHS = [
-  "Dr. Edward Sam Crabbe is a distinguished legal practitioner, Notary Public, Governance Consultant, and Regulatory and Tax Advisory professional with over fifteen (15) years of legal practice spanning civil and criminal litigation, with deep specialisation in corporate law, banking and finance law, commercial law, land law, and labour law.",
-  "He is the Managing Partner of Crabbe, Crabbe & Co., a position he has held since October 2015. Prior to founding and leading the Firm, he served as Managing Partner of Crabbe, Romanlevi & Associates (2014–2015) and as Acting Managing Partner of Brookman-Amissah & Associates (2012–2013), where he had earlier practised as a lawyer from 2009. Between 2007 and 2012, he also served as a Resource Person and Lecturer at the Faculty of Law, University of Ghana, Legon, where he contributed to the formation of a generation of Ghanaian legal practitioners.",
+  "Dr. Edward Sam Crabbe is a legal practitioner, Notary Public, Governance Consultant, and Regulatory and Tax Advisory professional with over fifteen (15) years of legal practice spanning civil and criminal litigation, with specialisation in corporate law, banking and finance law, commercial law, land law, and labour law.",
+  "He is the Managing Partner of Crabbe, Crabbe & Co., a position he has held since October 2015. Prior to founding the Firm, he served as Managing Partner of Crabbe, Romanlevi & Associates (2014–2015) and as Acting Managing Partner of Brookman-Amissah & Associates (2012–2013), where he had earlier practised as a lawyer from 2009. Between 2007 and 2012, he also served as a Resource Person and Lecturer at the Faculty of Law, University of Ghana, Legon.",
 ];
 
-const EXPERTISE_AREAS = [
+const PRACTICE_AREAS = [
   "Banking and Finance Law",
   "Land Law",
   "Corporate Governance",
@@ -29,7 +29,7 @@ const EXPERTISE_AREAS = [
 ];
 
 const ADVISORY =
-  "Dr. Crabbe has built a strong reputation for providing practical, commercially focused, and solution-driven legal and governance support. He is actively involved in advisory and consultancy services for financial institutions, including training banking executives, management, compliance officers, and operational staff in areas such as Negotiable Instruments, Fraud Detection & Prevention, Banking Regulation, Operational Risk Management, and Corporate Governance.";
+  "Dr. Crabbe provides legal and governance advisory services to financial institutions, including training banking executives, management, compliance officers, and operational staff in areas such as Negotiable Instruments, Fraud Detection & Prevention, Banking Regulation, Operational Risk Management, and Corporate Governance.";
 
 const QUALIFICATIONS = [
   "Doctorate in Theology (ThD) — Immanuel Bible Institute, Brooklyn, Ghana Campus",
@@ -94,9 +94,9 @@ export default function HeadOfChambers() {
               <>
                 <div>
                   <p className="mb-3 font-medium text-secondary_color">
-                    His areas of expertise include:
+                    His areas of practice include:
                   </p>
-                  <BulletList items={EXPERTISE_AREAS} />
+                  <BulletList items={PRACTICE_AREAS} />
                 </div>
 
                 <p>{ADVISORY}</p>

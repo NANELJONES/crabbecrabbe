@@ -12,7 +12,7 @@ export default function CareersPage() {
         <AnimateUp>
           <Heading
             heading="Careers"
-            subHeading="Explore opportunities to grow your career with Crabbe, Crabbe & Co."
+            subHeading="Current employment opportunities at Crabbe, Crabbe & Co."
           />
         </AnimateUp>
 

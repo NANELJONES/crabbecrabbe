@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Pattern from "./Pattern";
 
-const MESSAGE = `When I established Crabbe Crabbe & Co., my aim was simple: to build a law firm where clients receive clear advice, strong representation, and a team that genuinely cares about the outcome of their matter. Legal problems can be stressful; our role is to guide you through them with confidence and composure.
+const MESSAGE = `When I established Crabbe Crabbe & Co., my aim was to build a law firm where clients receive clear advice and competent representation from qualified practitioners. Legal matters can be complex; our role is to explain the relevant law and represent clients in accordance with applicable rules and professional obligations.
 
-Over the years, I have seen how much difference it makes when a lawyer listens first, explains the law in plain terms, and fights strategically for the client's interests — whether in the boardroom or in court. That is the standard we hold ourselves to every day.
+Over the years, I have observed the importance of listening to clients' instructions, explaining legal issues in plain terms, and representing their interests diligently — whether in advisory work or in court. That is the standard we apply in our practice.
 
-This firm is built on trust, discipline, and a deep respect for the rule of law. We serve individuals, businesses, and institutions across Ghana with the same commitment: thorough preparation, honest counsel, and results that matter. Thank you for considering Crabbe Crabbe & Co. I look forward to the opportunity to serve you.`;
+This firm is guided by discipline and respect for the rule of law. We act for individuals, businesses, and institutions across Ghana. For enquiries, please contact the Firm using the details on this website.`;
 
 export default function MessageFromFounder({ hideHeader = false }) {
   return (
@@ -26,8 +26,8 @@ export default function MessageFromFounder({ hideHeader = false }) {
          
             </div>
             <div className="absolute bottom-10 w-full left-10 max-w-[300px] md:left-[60%] md:bottom-1/3 bg-primary_color px-4 py-3 md:px-6 md:py-4">
-                <h6 className="font-semibold text-white">Mr Crabbe Crabbe</h6>
-                <p className="text-sm text-white/90">Head Senior Partner</p>
+                <h6 className="font-semibold text-white">Dr. Edward Sam Crabbe Esq.</h6>
+                <p className="text-sm text-white/90">Managing Partner</p>
               </div>
           </div>
 

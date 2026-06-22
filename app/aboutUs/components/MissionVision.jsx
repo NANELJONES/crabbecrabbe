@@ -6,18 +6,18 @@ export default function MissionVision() {
         <div>
           <h1 className="heading_primary ">Our Mission</h1>
           <p className="mt-4">
-            To be a leading and trusted law firm in Ghana, globally recognised
-            for excellence in advocacy, integrity in practice, and consistent
-            delivery of innovative, practical legal solutions that drive client
-            success.
+            To provide legal services in Ghana with integrity, professional
+            competence, and adherence to the Legal Profession Rules, serving
+            individuals, businesses, and institutions through qualified legal
+            advice and representation.
           </p>
         </div>
         <div>
           <h1 className="heading_primary ">Our Vision</h1>
           <p className="mt-4">
-            To be a globally acclaimed law firm, renowned for delivering
-            exceptional legal solutions and setting the highest standards of
-            excellence.
+            To maintain a law practice that serves clients in Ghana and
+            internationally through qualified legal advice, representation, and
+            compliance with applicable professional standards.
           </p>
         </div>
       </div>
@@ -25,7 +25,7 @@ export default function MissionVision() {
       <div className="relative mt-10 aspect-[21/9] max-h-[500px] w-full overflow-hidden md:mt-14">
         <Image
           src="/company/firm.jpg"
-          alt="Modern city skyline"
+          alt="Crabbe Crabbe & Co. office"
           fill
           className="object-cover"
         />

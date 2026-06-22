@@ -11,7 +11,7 @@ const TAGLINE =
   "Barrister & Solicitor of the Supreme Court of Ghana, Chartered Banker, Commercial Law Lecturer, Governance & Compliance Consultant";
 
 const INTRO_PARAGRAPHS = [
-  "Rev. Pernell Robert Osei-Boakye Esq. is a seasoned legal practitioner, Chartered Banker, academic, and corporate governance professional with over three decades of banking, legal, regulatory, and management experience.",
+  "Rev. Pernell Robert Osei-Boakye Esq. is a legal practitioner, Chartered Banker, academic, and corporate governance professional with over three decades of banking, legal, regulatory, and management experience.",
   "He is a Management Member of Crabbe, Crabbe & Co. and serves as Branch Head of the Firm's Weija Office. He also serves as Board Secretary of a Bank in Ghana, bringing practical boardroom, governance, regulatory, and institutional experience to the Firm's advisory practice.",
 ];
 

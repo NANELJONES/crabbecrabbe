@@ -12,7 +12,7 @@ export default function PracticeAreasPage() {
         <AnimateUp>
           <Heading
             heading="Our Practice Areas"
-            subHeading="Comprehensive legal services for individuals, corporations, and institutions across Ghana."
+            subHeading="Legal services offered by the Firm to individuals, corporations, and institutions in Ghana."
           />
         </AnimateUp>
       </Layout1>

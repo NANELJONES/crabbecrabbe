@@ -19,7 +19,7 @@ const BlogSample = () => {
     <>
        <Layout1>
        <div className=' w-full flex flex-col gap-[2em]'>
-        <h1 className='text-primary_color'>Exclusive Updates</h1>
+        <h1 className="text-secondary_color">Firm Updates</h1>
         <h6 className='text-secondary_color'>Recent Posts</h6>
         <div className='  flex flex-col gap-[1em] md:flex-row justify-between '>
       
@@ -86,7 +86,7 @@ const BlogSample = () => {
                         
 
                      <AnimateUp>
-                       <ButtonLink href="/blog">Explore More</ButtonLink>
+                       <ButtonLink href="/blog">View all articles</ButtonLink>
                      </AnimateUp>
                       
                     </div>

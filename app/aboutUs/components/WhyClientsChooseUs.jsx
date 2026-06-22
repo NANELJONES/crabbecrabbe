@@ -1,12 +1,12 @@
 import SectionTitle from "./SectionTitle";
 
-const REASONS = [
-  "Deep understanding of law, governance and compliance frameworks",
-  "Practical, commercially focused legal solutions",
-  "Strong litigation and recovery capabilities",
-  "High ethical and professional standards",
-  "Prompt response and institutional support",
-  "Confidential and strategic advisory services",
+const SERVICES = [
+  "Legal advice on law, governance, and compliance frameworks",
+  "Corporate and commercial legal services",
+  "Litigation and debt recovery services",
+  "Adherence to professional ethical standards",
+  "Administrative and institutional support",
+  "Confidential advisory services",
 ];
 
 const COMPLIANCE_STANDARDS = [
@@ -14,7 +14,7 @@ const COMPLIANCE_STANDARDS = [
   "Professional ethical obligations",
   "Data protection and confidentiality standards",
   "Anti-Money Laundering (AML/CFT) requirements",
-  "Corporate governance best practices",
+  "Corporate governance standards",
 ];
 
 export default function WhyClientsChooseUs() {
@@ -22,17 +22,17 @@ export default function WhyClientsChooseUs() {
     <section className="border-t border-secondary_color/10 py-14 md:py-20">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-12">
         <div className="lg:col-span-2">
-          <SectionTitle>Why Clients Choose Us</SectionTitle>
+          <SectionTitle>What We Offer</SectionTitle>
         </div>
 
         <div className="flex flex-col gap-8 lg:col-span-3">
           <div>
             <p className="font-medium text-secondary_color">
-              Our clients choose us because we give them:
+              The Firm provides:
             </p>
             <ul className="mt-4 list-disc space-y-3 pl-5 marker:text-primary_color">
-              {REASONS.map((reason) => (
-                <li key={reason}>{reason}</li>
+              {SERVICES.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>

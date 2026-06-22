@@ -12,7 +12,7 @@ export default function BlogPage() {
         <AnimateUp>
           <Heading
             heading="Our Blog"
-            subHeading="Legal insights, firm updates, and expert commentary from the Crabbe Crabbe & Co. team."
+            subHeading="Legal insights, firm updates, and commentary on legal developments from the Crabbe Crabbe & Co. team."
           />
         </AnimateUp>
         <AnimateUp delay={0.08}>

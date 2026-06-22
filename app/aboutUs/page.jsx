@@ -17,7 +17,7 @@ export default function AboutPage() {
         <AnimateUp>
           <Heading
             heading="About Crabbe Crabbe & Co."
-            subHeading="Learn about our mission, values, and commitment to exceptional legal service in Ghana."
+            subHeading="Information about our legal practice, mission, values, and offices in Ghana."
           />
         </AnimateUp>
 

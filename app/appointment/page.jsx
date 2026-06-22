@@ -128,8 +128,8 @@ export default function AppointmentPage() {
       <Layout1>
         <AnimateUp>
           <Heading
-            heading="Book An Appointment"
-            subHeading="Schedule a consultation with our team at your preferred branch in Ghana."
+            heading="Request an Appointment"
+            subHeading="Submit a request to meet with the Firm at your preferred branch in Accra."
           />
         </AnimateUp>
       </Layout1>
@@ -334,7 +334,7 @@ export default function AppointmentPage() {
                 className="primary_button disabled:cursor-not-allowed disabled:opacity-60"
                 disabled={isSending}
               >
-                <span>{isSending ? "Submitting…" : "Book Appointment"}</span>
+                <span>{isSending ? "Submitting…" : "Submit Request"}</span>
                 <span className="button_icon">
                   <HiArrowRight className="h-3.5 w-3.5" aria-hidden />
                 </span>

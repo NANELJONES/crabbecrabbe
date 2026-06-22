@@ -38,15 +38,14 @@ export default function PracticeAreaSection({
       <div className=" md:gap-10">
         <p>{description}</p>
         <p>
-          Crabbe Crabbe & Co. is a forward-thinking law firm dedicated to
-          providing high-quality legal services with precision, integrity, and
-          strategic insight tailored to each client&apos;s unique circumstances.
+          Crabbe Crabbe & Co. provides legal services in this practice area.
+          For enquiries, please contact the Firm or request an appointment.
         </p>
       </div>
 
 {/* this is the button */}
       <div className="mt-8">
-        <ButtonLink href="/appointment">Book An Appointment</ButtonLink>
+        <ButtonLink href="/appointment">Request an Appointment</ButtonLink>
       </div>
 
 </div>

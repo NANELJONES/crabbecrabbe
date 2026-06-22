@@ -4,28 +4,28 @@ import Pattern from "./Pattern";
 
 const VALUES = [
   {
-    title: "Strategic Thinking, Not Just Legal Advice",
+    title: "Commercial Context in Legal Advice",
     description:
-      "We approach every case with a business and outcome-focused mindset.",
+      "Legal advice is provided with regard to the commercial and regulatory context of each matter.",
   },
   {
-    title: "Client-Centered Approach",
+    title: "Client Communication",
     description:
-      "Your goals shape our strategy. We listen, understand, and act in your best interest.",
+      "We listen to clients' instructions and provide advice in accordance with our professional duties.",
   },
   {
-    title: "Integrity You Can Trust",
+    title: "Professional Integrity",
     description:
-      "Transparency and ethical practice are at the core of everything we do.",
+      "The Firm operates in accordance with the Legal Profession Rules of Ghana and applicable ethical standards.",
   },
   {
-    title: "Innovative Legal Solutions",
+    title: "Qualified Legal Practitioners",
     description:
-      "We combine traditional expertise with modern approaches to deliver results.",
+      "Matters are handled by enrolled solicitors and barristers of the Superior Courts of Ghana.",
   },
 ];
 
-const HIGHLIGHTS = ["PROFESSIONAL", "TALENT ABOVE", "MAIN POINT"];
+const HIGHLIGHTS = ["ACCRA OFFICES", "17 LAWYERS", "EST. 2015"];
 
 export default function UniqueValueProposition() {
   return (
@@ -40,7 +40,7 @@ export default function UniqueValueProposition() {
       <div className="absolute inset-0 bg-primary_color/20" />
 
       <div className="section_container flex flex-col lg:gap-10 relative z-10">
-        <h1 className="text-left text-white  ">Our Unique Value Proposition</h1>
+        <h1 className="text-left text-white  ">Our Approach to Legal Practice</h1>
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-12 md:gap-y-10">
           {VALUES.map((item, index) => (
@@ -63,8 +63,8 @@ export default function UniqueValueProposition() {
 
         <div className="mt-6 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <p className="max-w-md text-white md:text-lg">
-            We are more than legal advisors — we are strategic partners committed
-            to your long-term success.
+            Crabbe Crabbe & Co. provides legal advice and representation across
+            its practice areas. For enquiries, please contact the Firm.
           </p>
 
           <div className="flex flex-wrap items-center justify-end gap-4">

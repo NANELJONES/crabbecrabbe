@@ -103,7 +103,7 @@ function TeamMemberExpanded({ member, onToggle }) {
 
           {member.expertise?.length > 0 && (
             <>
-              <p className="text-sm font-medium text-white">Areas of Expertise</p>
+              <p className="text-sm font-medium text-white">Areas of Practice</p>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {member.expertise.map((area) => (
                   <li
@@ -130,7 +130,7 @@ function TeamMemberExpanded({ member, onToggle }) {
 }
 
 export default function TeamPage() {
-  const [team, setTeam] = useState([]);
+  const [roleGroups, setRoleGroups] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedId, setSelectedId] = useState(null);
 
@@ -145,8 +145,14 @@ export default function TeamPage() {
           return;
         }
 
-        console.log("[Team] Loaded", json.data?.length ?? 0, "member(s)");
-        setTeam(json.data ?? []);
+        console.log(
+          "[Team] Loaded",
+          json.data?.length ?? 0,
+          "member(s) in",
+          json.groups?.length ?? 0,
+          "role group(s)"
+        );
+        setRoleGroups(json.groups ?? []);
       } catch (error) {
         console.error("[Team] Fetch failed:", error);
       } finally {
@@ -156,6 +162,11 @@ export default function TeamPage() {
 
     fetchTeam();
   }, []);
+
+  const teamCount = roleGroups.reduce(
+    (total, group) => total + group.members.length,
+    0
+  );
 
   const toggleMember = (id) => {
     setSelectedId((prev) => (prev === id ? null : id));
@@ -167,7 +178,7 @@ export default function TeamPage() {
         <AnimateUp>
           <Heading
             heading="Our Team"
-            subHeading="Meet the team of experts at Crabbe Crabbe & Co."
+            subHeading="Meet the lawyers and staff of Crabbe Crabbe & Co."
           />
         </AnimateUp>
 
@@ -184,7 +195,7 @@ export default function TeamPage() {
         <section>
           <AnimateUp>
             <h2 className="heading_primary mb-8 text-2xl font-bold md:mb-10 md:text-3xl lg:text-4xl">
-              Our Expert Team
+              Lawyers & Staff
             </h2>
           </AnimateUp>
 
@@ -192,37 +203,50 @@ export default function TeamPage() {
             <p className="text-secondary_color/70">Loading team members…</p>
           )}
 
-          {!isLoading && team.length === 0 && (
+          {!isLoading && teamCount === 0 && (
             <p className="text-secondary_color/70">
               Team profiles will appear here soon.
             </p>
           )}
 
-          <div className="flex w-full flex-wrap justify-center gap-4 md:gap-6">
-            {team.map((member, index) => {
-              const isExpanded = selectedId === member.id;
-
-              return (
-                <AnimateUp
-                  key={member.id}
-                  delay={Math.min(index * 0.06, 0.36)}
-                  className={isExpanded ? EXPANDED_WIDTH : CARD_WIDTH}
-                >
-                  {isExpanded ? (
-                    <TeamMemberExpanded
-                      member={member}
-                      onToggle={() => toggleMember(member.id)}
-                    />
-                  ) : (
-                    <TeamMemberCard
-                      member={member}
-                      isSelected={false}
-                      onClick={() => toggleMember(member.id)}
-                    />
-                  )}
+          <div className="flex flex-col gap-12 md:gap-16">
+            {roleGroups.map((group, groupIndex) => (
+              <div key={group.roleName}>
+                <AnimateUp delay={Math.min(groupIndex * 0.05, 0.2)}>
+                  <h3 className="heading_primary mb-6 text-xl font-bold md:mb-8 md:text-2xl lg:text-3xl">
+                    {group.roleName}
+                  </h3>
                 </AnimateUp>
-              );
-            })}
+
+                <div className="flex w-full flex-wrap justify-center gap-4 md:gap-6">
+                  {group.members.map((member, memberIndex) => {
+                    const isExpanded = selectedId === member.id;
+                    const animationIndex = groupIndex * 4 + memberIndex;
+
+                    return (
+                      <AnimateUp
+                        key={member.id}
+                        delay={Math.min(animationIndex * 0.06, 0.36)}
+                        className={isExpanded ? EXPANDED_WIDTH : CARD_WIDTH}
+                      >
+                        {isExpanded ? (
+                          <TeamMemberExpanded
+                            member={member}
+                            onToggle={() => toggleMember(member.id)}
+                          />
+                        ) : (
+                          <TeamMemberCard
+                            member={member}
+                            isSelected={false}
+                            onClick={() => toggleMember(member.id)}
+                          />
+                        )}
+                      </AnimateUp>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </Layout1>

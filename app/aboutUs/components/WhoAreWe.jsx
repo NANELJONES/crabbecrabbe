@@ -31,11 +31,17 @@ export default function WhoAreWe() {
 
         <div className="flex flex-col gap-8">
           <p>
-            Crabbe Crabbe & Co. is a modern Ghanaian law firm built on excellence,
-            integrity, and a deep commitment to client success. We combine
-            rigorous legal expertise with practical, business-minded counsel to
-            help individuals and organisations navigate complex matters with
-            confidence.
+            Crabbe Crabbe & Co. is a full-service law firm in Ghana with offices in
+            Tse Addo and Weija, Accra. The Firm advises local and international
+            clients on matters within its practice areas, including corporate and
+            commercial law, banking and finance, litigation, regulatory compliance,
+            property, labour, and tax.
+          </p>
+          <p>
+            The Firm&apos;s lawyers work with regard to each client&apos;s
+            commercial and regulatory context, with attention to the legal issues
+            involved and the standards required under the Legal Profession Rules
+            of Ghana.
           </p>
           <div className="grid grid-cols-3 gap-3 md:gap-4">
             {GALLERY_IMAGES.map((img) => (

@@ -2,9 +2,9 @@ import { SEO_KEYWORDS } from "./keywords";
 
 export const SITE_NAME = "Crabbe Crabbe & Co";
 export const SITE_TITLE_DEFAULT =
-  "Crabbe Crabbe & Co | Leading Law Firm in Ghana — International Legal Services";
+  "Crabbe Crabbe & Co | Law Firm in Ghana — International Legal Services";
 export const SITE_DESCRIPTION =
-  "Crabbe Crabbe & Co is a leading Ghanaian law firm with offices in Tse Addo and Weija, Accra. We provide corporate, banking, litigation, regulatory compliance, land, tax, and international legal services to financial institutions, corporations, and clients worldwide.";
+  "Crabbe Crabbe & Co. is a full-service Ghanaian law firm with offices in Tse Addo and Weija, Accra. The Firm advises local and international clients on corporate, banking, litigation, regulatory, commercial, property, tax, and related legal matters.";
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.crabbecrabbeandco.com";
 

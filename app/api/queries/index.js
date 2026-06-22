@@ -93,6 +93,31 @@ export const getGallery = async (first = 2, after = null) => {
 
 
 
+function groupTeamByRole(members) {
+  const roleMap = new Map();
+
+  for (const member of members) {
+    const roleName = member.roleName || "Other";
+    const existing = roleMap.get(roleName);
+
+    if (existing) {
+      existing.members.push(member);
+      existing.rank = Math.min(existing.rank, member.roleRank);
+      continue;
+    }
+
+    roleMap.set(roleName, {
+      roleName,
+      rank: member.roleRank,
+      members: [member],
+    });
+  }
+
+  return [...roleMap.values()].sort(
+    (a, b) => a.rank - b.rank || a.roleName.localeCompare(b.roleName)
+  );
+}
+
 // get Team
 export const getTeam = async () => {
   const query = gql`
@@ -100,12 +125,17 @@ export const getTeam = async () => {
       teamsConnection {
         edges {
           node {
+            id
             description
             employeeImage {
               url
             }
             employeeName
             employeePosition
+            staffRole {
+              roleName
+              rank
+            }
             practiceAreas {
               areaName
               slug
@@ -119,21 +149,36 @@ export const getTeam = async () => {
   try {
     const response = await hygraphRequest(query);
 
-    return (
-      response?.teamsConnection?.edges?.map(({ node }) => ({
-        id: slugify(node.employeeName),
-        name: node.employeeName ?? "",
-        title: node.employeePosition ?? "",
-        image: node.employeeImage?.url ?? "",
-        expertise:
-          node.practiceAreas?.map((area) => area.areaName).filter(Boolean) ??
-          [],
-        bio: node.description ?? "",
-      })) ?? []
-    );
+    const members =
+      response?.teamsConnection?.edges?.map(({ node }) => {
+        const roleName =
+          node.staffRole?.roleName ?? node.employeePosition ?? "";
+        const roleRank =
+          typeof node.staffRole?.rank === "number"
+            ? node.staffRole.rank
+            : Number.MAX_SAFE_INTEGER;
+
+        return {
+          id: node.id ?? slugify(node.employeeName),
+          name: node.employeeName ?? "",
+          title: roleName,
+          roleName,
+          roleRank,
+          image: node.employeeImage?.url ?? "",
+          expertise:
+            node.practiceAreas?.map((area) => area.areaName).filter(Boolean) ??
+            [],
+          bio: node.description ?? "",
+        };
+      }) ?? [];
+
+    return {
+      data: members,
+      groups: groupTeamByRole(members),
+    };
   } catch (error) {
     console.error("[getTeam] Error:", error?.response?.errors ?? error?.message ?? error);
-    return [];
+    return { data: [], groups: [] };
   }
 };
 

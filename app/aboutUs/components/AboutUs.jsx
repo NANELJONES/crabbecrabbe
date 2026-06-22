@@ -10,34 +10,28 @@ export default function AboutUs() {
 
         <div className="flex flex-col gap-6 lg:col-span-3">
           <p>
-            Crabbe, Crabbe & Co. is a leading law firm providing strategic
-            legal, governance, compliance, regulatory, and consultancy services
-            to financial institutions, corporations, businesses, and public sector
-            entities. With offices at Tse Addo and Weija, Accra, the Firm
-            combines strong legal expertise with practical commercial insight to
-            deliver timely, solution-driven, and internationally aligned
-            professional services.
+            Crabbe, Crabbe & Co. is a full-service law firm providing legal,
+            governance, compliance, regulatory, and consultancy services to
+            financial institutions, corporations, businesses, and public sector
+            entities. With offices at Tse Addo and Weija, Accra, the Firm advises
+            on matters across its practice areas in accordance with applicable law
+            and professional rules.
           </p>
           <p>
-            Beyond delivery, the Firm is animated by a clear institutional
-            vision: to grow alongside our clients. Every engagement is
-            approached as a long-term partnership in which our presence,
-            capability, and depth of service advance in step with the
-            institutions we serve. As our clients expand and their needs evolve,
-            the Firm continues to invest in people, infrastructure, and practice
-            areas to remain a dependable and forward-looking partner.
+            The Firm works with clients on an ongoing basis across corporate,
+            banking, regulatory, and litigation matters. Our lawyers approach each
+            instruction with regard to the client&apos;s objectives and the legal
+            framework governing the matter, while maintaining confidentiality and
+            clear communication throughout.
           </p>
           <p>
             The Firm currently comprises seventeen (17) qualified lawyers, each
-            bringing outstanding experience across diverse fields of legal
-            practice, including banking and finance law, corporate and
+            practising in fields including banking and finance law, corporate and
             commercial law, regulatory compliance, debt recovery and enforcement,
             litigation and dispute resolution, property and real estate law,
             labour and employment law, and tax advisory. The legal team is
-            supported by a dedicated complement of paralegals, administrative,
-            accounting, and operational staff, ensuring that every client
-            engagement is supported by both legal excellence and operational
-            efficiency.
+            supported by paralegals, administrative, accounting, and operational
+            staff.
           </p>
         </div>
       </div>

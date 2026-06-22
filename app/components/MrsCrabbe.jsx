@@ -8,19 +8,19 @@ import Pattern from "./Pattern";
 const NAME = "Patience Kuleke";
 const ROLE = "Head of Human Resources & Administration";
 const TAGLINE =
-  "MBA — Strategic leadership in human resource management, organizational development, and administrative operations";
+  "MBA — Human resource management, organizational development, and administrative operations";
 
 const INTRO_PARAGRAPHS = [
-  "Patience Kuleke serves as the Head of Human Resources & Administration at Crabbe Crabbe and Co, providing strategic leadership in human resource management, organizational development, and administrative operations. She holds a Master of Business Administration (MBA) and brings strong expertise in building effective systems that support workforce performance, operational efficiency, and institutional growth.",
-  "In her role, she is responsible for overseeing the firm's human resource functions, including talent management, employee relations, policy development, performance management, and staff development. She also provides leadership in administrative operations, ensuring the smooth coordination of internal processes in support of the firm's legal practice.",
+  "Patience Kuleke serves as the Head of Human Resources & Administration at Crabbe Crabbe and Co. She holds a Master of Business Administration (MBA) and is responsible for the Firm's human resource functions, including talent management, employee relations, policy development, performance management, and staff development.",
+  "In her role, she oversees administrative operations and the coordination of internal processes in support of the Firm's legal practice.",
 ];
 
 const LEADERSHIP_PARAGRAPHS = [
-  "She plays a key role in strengthening organizational structure, promoting professionalism, and supporting the development of a disciplined and efficient working environment. Her approach is grounded in accountability, integrity, and continuous improvement, with a strong focus on aligning people and processes with the firm's strategic objectives.",
-  "As part of the leadership structure of Crabbe Crabbe and Co, she contributes to initiatives aimed at enhancing institutional capacity, improving operational systems, and sustaining a high standard of professional service delivery.",
+  "She supports the Firm's organisational structure and administrative systems. Her work is guided by accountability, integrity, and adherence to internal policies and professional standards.",
+  "As part of the Firm's leadership, she contributes to administrative and operational functions that support the legal practice.",
 ];
 
-const EXPERTISE_AREAS = [
+const RESPONSIBILITIES = [
   "Human Resource Management",
   "Organizational Development",
   "Employee Relations",
@@ -88,9 +88,9 @@ export default function MrsCrabbe() {
 
                 <div>
                   <p className="mb-3 font-medium text-secondary_color">
-                    Areas of Expertise
+                    Areas of Responsibility
                   </p>
-                  <BulletList items={EXPERTISE_AREAS} />
+                  <BulletList items={RESPONSIBILITIES} />
                 </div>
               </>
             )}

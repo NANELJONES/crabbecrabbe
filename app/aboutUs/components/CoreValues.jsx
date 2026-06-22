@@ -9,33 +9,33 @@ import {
 
 const CORE_VALUES = [
   {
-    title: "Excellence",
+    title: "Professional Competence",
     description:
-      "We pursue the highest standards in every matter we handle, delivering precise and effective legal solutions.",
+      "We aim to handle each matter with diligence and in accordance with professional standards.",
     icon: HiOutlineSparkles,
   },
   {
     title: "Integrity",
     description:
-      "Honesty, transparency, and ethical practice guide every decision we make on behalf of our clients.",
+      "The Firm operates in accordance with the Legal Profession Rules of Ghana and applicable ethical obligations.",
     icon: HiOutlineShieldCheck,
   },
   {
-    title: "Innovation",
+    title: "Responsiveness",
     description:
-      "We embrace forward-thinking approaches to solve complex legal challenges in a changing world.",
+      "We work within current legal and regulatory frameworks to address clients' legal requirements.",
     icon: HiOutlineLightBulb,
   },
   {
     title: "Collaboration",
     description:
-      "We work closely with clients as partners, aligning our strategy with their goals and priorities.",
+      "We work with clients to understand their instructions and provide advice within our professional duties.",
     icon: HiOutlineUserGroup,
   },
   {
     title: "Justice",
     description:
-      "We advocate fiercely and fairly, ensuring every client receives dedicated and principled representation.",
+      "We represent clients diligently and fairly in accordance with applicable law and professional rules.",
     icon: HiOutlineScale,
   },
 ];
@@ -71,10 +71,10 @@ export default function CoreValues() {
               aria-hidden
             />
             <p className="max-w-4xl">
-              Crabbe Crabbe & Co. was founded with a clear vision to redefine legal
-              service delivery in Ghana through excellence, trust, and innovation.
-              From its inception, the firm has remained focused on building strong
-              client relationships while delivering results that matter.
+              Crabbe Crabbe & Co. was established to provide legal services in
+              Ghana in accordance with the Legal Profession Rules. The Firm
+              continues to serve individuals, businesses, and institutions across
+              its practice areas.
             </p>
           </div>
         </AnimateUp>

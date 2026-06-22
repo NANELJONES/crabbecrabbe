@@ -24,8 +24,8 @@ export default function PracticeAreas({ hideHeader = false }) {
                 <Pattern size="large" />
               </div>
               <h5 className="mt-6 max-w-sm">
-                We offer a broad range of legal services designed to meet the
-                needs of individuals, corporations, and institutions.
+                The Firm provides legal services in the following practice
+                areas.
               </h5>
             </AnimateUp>
           )}

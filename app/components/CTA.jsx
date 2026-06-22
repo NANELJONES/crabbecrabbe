@@ -15,16 +15,17 @@ export default function CTA() {
 
       <div className="section_container relative z-10 text-center">
         <h1 className="text-white">
-          Need Legal Assistance?
-          <br />
-          Let&apos;s Talk.
+          Contact the Firm
         </h1>
+        <p className="mt-4 text-white/90">
+          For enquiries or to request an appointment, please use the options below.
+        </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <ButtonLink href="/contactUs" variant="secondary">
-            Contact Our Firm
+            Send an enquiry
           </ButtonLink>
           <ButtonLink href="/appointment" variant="primary">
-            Book an appointment
+            Request an appointment
           </ButtonLink>
         </div>
       </div>

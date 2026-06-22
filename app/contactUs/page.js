@@ -116,7 +116,7 @@ export default function ContactPage() {
         <AnimateUp>
           <Heading
             heading="Get In Touch With Us"
-            subHeading="Discuss your legal needs or request a consultation with our team in Ghana."
+            subHeading="Send an enquiry or request contact from the Firm's offices in Ghana."
           />
         </AnimateUp>
       </Layout1>

@@ -14,13 +14,13 @@ import Pattern from "./Pattern";
 
 const COMPANY_LINKS_LEFT = [
   { label: "About", href: "/aboutUs" },
-  { label: "Our Expertise", href: "/practiceAreas" },
+  { label: "Practice Areas", href: "/practiceAreas" },
   { label: "Team", href: "/team" },
 ];
 
 const COMPANY_LINKS_RIGHT = [
   { label: "Blog", href: "/blog" },
-  { label: "Book An Appointment", href: "/appointment" },
+  { label: "Request Appointment", href: "/appointment" },
   { label: "Contact Us", href: "/contactUs" },
 ];
 
@@ -69,12 +69,12 @@ const Footer = () => {
           {/* Middle column */}
           <div className="flex flex-col gap-8">
             <p className="max-w-md text-sm leading-relaxed text-secondary_color md:text-[0.9rem]">
-              Built on a foundation of excellence and innovation, our firm
-              provides strategic legal guidance tailored to your needs.
+              Crabbe Crabbe & Co. — law firm with offices in Tse Addo and Weija,
+              Accra.
             </p>
 
             <div>
-              <h1 className="text-base font-semibold text-primary_color md:text-lg">
+              <h1 className="text-base font-semibold text-secondary_color md:text-lg">
                 Company
               </h1>
               <hr className="mt-2 mb-4 border-secondary_color/20" />
@@ -107,7 +107,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h1 className="text-base font-semibold text-primary_color md:text-lg">
+              <h1 className="text-base font-semibold text-secondary_color md:text-lg">
                 Our Socials
               </h1>
               <div className="mt-4 flex flex-wrap items-center gap-3">
