@@ -18,7 +18,7 @@ export default function PracticeAreaSection({
           <h2 className="heading_primary text-2xl md:text-3xl lg:text-4xl">
             {title}
           </h2>
-          <hr className="mt-3 w-full max-w-md border-t-2 border-primary_color" />
+          <hr className="mt-3 w-full max-w-md border-t-2 border-secondary_color" />
         </div>
        
 <div className="flex flex-col gap-4 lg:col-span-1">

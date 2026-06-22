@@ -110,7 +110,7 @@ export function usePracticeAreasNav(sections) {
 export default function PracticeAreasSidebar({ activeId, sections }) {
   return (
     <aside className="relative hidden w-full shrink-0 self-stretch lg:block lg:w-[240px] xl:w-[260px]">
-      <div className="absolute inset-0 bg-primary_color" aria-hidden />
+      <div className="absolute inset-0 bg-secondary_color/80" aria-hidden />
       <nav
         aria-label="Practice areas"
         className="sticky top-[4.5rem] z-40 relative flex w-full flex-col px-2.5 py-2.5"
